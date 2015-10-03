@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Fondo">#FF0000EE</color>
+    <color name="Etiquetas">#ffa2a2a2</color>
+    <color name="TextoUsuario">#ffe6e6e6</color>
+    <color name="FondoBoton">#ffa2a2a2</color>
+    <color name="TextoBoton">#FF000000</color>
+
+
+</resources>
