@@ -65,11 +65,12 @@ public class MainActivity extends AppCompatActivity {
                     config.setSave(false);
                 }
                 Log.v("user",config.getUser());
-                Log.v("pass",config.getPass());
-                Log.v("save",config.getSave().toString());
-                Log.v("url",config.getUrlRestful());
+                Log.v("pass", config.getPass());
+                Log.v("save", config.getSave().toString());
+                Log.v("url", config.getUrlRestful());
                 gestionConfigRepositorio.guardarConfiguracion(activity, config);
                 Intent intent = new Intent("android.intent.action.SERVICE_LIST");
+
                 intent.putExtra("url", config.getUrlRestful());
                 intent.putExtra("user", et_user.getText().toString());
                 intent.putExtra("pass", et_pass.getText().toString());
@@ -95,19 +96,19 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        switch (item.getItemId()){
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            Intent intent = new Intent("android.intent.action.SETTINGS");
-            startActivity(intent);
+            case R.id.action_settings:
+                Intent intent=new Intent(this,SettingsActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.action_settings_2:
+                Intent intent2=new Intent(this,SettingsActivity.class);
+                startActivity(intent2);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
 
-            return true;
         }
-
-        return super.onOptionsItemSelected(item);
     }
 }
