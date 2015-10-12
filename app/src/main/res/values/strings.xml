@@ -3,4 +3,10 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="List_Clientes">CLIENTES</string>
+    <string name="List_Equipos">EQUIPOS</string>
+    <string name="List_Tecnicos">TECNICOS</string>
+    <string name="List_OrdenServicios">O.S.</string>
+
+
 </resources>
