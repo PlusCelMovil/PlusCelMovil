@@ -5,16 +5,9 @@
         android:title="@string/action_settings"
         android:orderInCategory="100"
         app:showAsAction="never" />
+    <item android:id="@+id/action_settings_2"
+        android:title="Info2"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
 
-    <item
-        android:id="@+id/menu_save"
-        app:showAsAction="never"
-        android:icon="@android:drawable/ic_menu_save"
-        android:title="@string/action_settings"/>
-
-    <item
-        android:id="@+id/menu_new"
-        app:showAsAction="never"
-        android:icon="@android:drawable/ic_menu_add"
-        android:title="@string/action_settings"/>
 </menu>
