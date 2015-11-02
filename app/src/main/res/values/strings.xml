@@ -7,6 +7,12 @@
     <string name="List_Equipos">EQUIPOS</string>
     <string name="List_Tecnicos">TECNICOS</string>
     <string name="List_OrdenServicios">O.S.</string>
+    <string name="title_activity_equipo_list">EquipoListActivity</string>
 
 
+    <string name="id_label">The ID is</string>
+    <string name="id_value">[id]</string>
+    <string name="content_label">The Content is</string>
+    <string name="content_value">[content]</string>
+    <string name="action_refresh">Refresh</string>
 </resources>
