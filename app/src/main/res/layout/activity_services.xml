@@ -21,7 +21,8 @@
         android:background="@color/FondoBoton"
         android:textColor="@color/TextoBoton"
         style="@style/AppTheme"
-        android:enabled="true"/>
+        android:enabled="true"
+        android:onClick="onClickButton_Equipment" />
 
 
     <Button
@@ -32,9 +33,9 @@
         android:layout_marginTop="90dp"
         android:layout_centerHorizontal="true"
         android:background="@color/FondoBoton"
-        android:enabled="false"
+        android:enabled="true"
         android:textColor="@color/TextoBoton"
-        />
+        android:onClick="onClickButton_Equipment" />
 
     <Button
         android:layout_width="220dp"
@@ -44,9 +45,9 @@
         android:layout_marginTop="160dp"
         android:layout_centerHorizontal="true"
         android:background="@color/FondoBoton"
-        android:enabled="false"
+        android:enabled="true"
         android:textColor="@color/TextoBoton"
-        />
+        android:onClick="onClickButton_prueba" />
 
     <Button
         android:layout_width="220dp"
