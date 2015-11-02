@@ -4,9 +4,17 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
     packagingOptions {
-        exclude 'META-INF/notice.txt'
 
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
         exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
     }
     defaultConfig {
         applicationId "com.pluscel.pluscelmovil"
@@ -24,7 +32,11 @@ android {
 }
 
 dependencies {
+
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'org.springframework.android:spring-android-rest-template:1.0.1.RELEASE'
+    compile ( [group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.4.1'],
+    [group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.4.1'],
+    [group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.4.1'])
 }
