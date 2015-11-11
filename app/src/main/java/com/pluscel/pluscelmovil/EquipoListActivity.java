@@ -188,26 +188,25 @@ public class EquipoListActivity extends Activity {
                 converter.getObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
                 restTemplate.getMessageConverters().add(converter);
-                String json = loadJSON();
-                Log.v("JSON leido", json);
+                String pep = pass;
+               // Log.v("JSON leido", json);
                 // Make the HTTP GET request to the Basic Auth protected URL
-               // ResponseEntity<Equipos> response = restTemplate.exchange(url, HttpMethod.GET, requestEntity, Equipos.class);
-                Equipos equipos=restTemplate.getForObject(url,Equipos.class);
+                ResponseEntity<Equipos> response = restTemplate.exchange(url, HttpMethod.GET, requestEntity, Equipos.class);
+               // Equipos equipos=restTemplate.getForObject(url,Equipos.class);
               //  Greeting greeting = restTemplate.getForObject("http://rest-service.guides.spring.io/greeting", Greeting.class);
-               // Equipos equipos = response.getBody();
-
-                //Log.v("listado Alumnos contiene", equipos.getResult().getValue().size() +"");
-
-                // Tomar nombres de los alumnos
-
-              //  int arraySize =equipos.getResult().getValue().size();
-               // RestLink[] alumnosArray = new RestLink[arraySize];
-                //for (int i=0; i< arraySize;i++){
-                 //   alumnosArray[i] = equipos.getResult().getValue().get(i);
-                //    Log.v("Alumno Encontrado", alumnosArray[i].getTitle());
-                //}
+                Equipos equipos = response.getBody();
 
 
+                Log.v("listado Equipos contiene", equipos.getResult().getValue().size() +"");
+
+                //
+
+                int arraySize = equipos.getResult().getValue().size();
+                RestLink[] equiposArray = new RestLink[arraySize];
+                for (int i=0; i< arraySize;i++){
+                    equiposArray[i] = equipos.getResult().getValue().get(i);
+                    Log.v("Equipo Encontrado", equiposArray[i].getTitle());
+                }
                 return equipos;
 
             } catch (Exception e) {
