@@ -22,7 +22,7 @@
         android:textColor="@color/TextoBoton"
         style="@style/AppTheme"
         android:enabled="true"
-        android:onClick="onClickButton_Equipment" />
+        android:onClick="onClickButton_ListCustomers" />
 
 
     <Button
