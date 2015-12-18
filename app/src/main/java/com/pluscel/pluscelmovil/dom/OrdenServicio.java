@@ -1,10 +1,9 @@
 package com.pluscel.pluscelmovil.dom;
 
 /**
- * Created by Pablo Pincheira on 20/10/2015.
+ * Created by Pablo Pincheira on 08/12/2015.
  */
-public class Equipo {
-
+public class OrdenServicio {
     Members members;
 
     public Members getMembers() {
@@ -18,43 +17,56 @@ public class Equipo {
 
     // nested class
     public class Members{
+        DatoString numero;
+        DatoTecnico tecnico;
+        DatoCliente cliente;
+        DatoEquipo equipo;
+        DatoString fechaHora;
+        DatoString falla;
+        DatoString importe;
+        DatoString comisionTecnico;
+        DatoString estado;
+        DatoString garantia;
+        DatoString EnviarAlertaSinArreglo;
+        DatoString EnviarAlertaTecnico;
 
-        DatoMarca marca;
-        DatoModelo modelo;
-        DatoString imei;
-        DatoImagen attachment;
-        DatoString AltaAccesorioEquipo;
-        DatoString listaAccesorioDeEquipo;
-        DatoString altaEquipoTecnico;
-        DatoString listaTecnicoDeEquipo;
-        DatoString altaFallaPorEquipoPorTecnico;
-        DatoString altaOrdenDeServicio;
-        DatoString buscarPorReparaciones;
-        DatoString altaPresupuesto;
+        public DatoString getNumero() {
+            return numero;
+        }
+        public void setTecnico(DatoTecnico tecnico) {
+            this.tecnico = tecnico;
+        }
+        public DatoTecnico getTecnico() {return tecnico;}
+        public void setEquipo(DatoEquipo equipo) {this.equipo = equipo;}
+        public DatoEquipo getEquipo() { return equipo;}
 
-        public DatoMarca getMarca() {
-            return marca;
+        public DatoCliente getCliente() {
+            return cliente;
+        }
+        public void setCliente(DatoCliente cliente) {
+            this.cliente = cliente;
+        }
+        public DatoString getFechaHora() {
+            return fechaHora;
+        }
+        public DatoString getFalla() {
+            return falla;
+        }
+        public DatoString getImporte() {
+            return importe;
+        }
+        public DatoString getComisionTecnico() {
+            return comisionTecnico;
+        }
+        public DatoString getEstado() {
+            return estado;
+        }
+        public DatoString getGarantia() {
+            return garantia;
         }
 
-        public void setMarca(DatoMarca marca) {
-            this.marca = marca;
-        }
 
-        public DatoModelo getModelo() {
-            return modelo;
-        }
 
-        public void setModelo(DatoModelo modelo) {
-            this.modelo = modelo;
-        }
-
-        public DatoString getImei() {
-            return imei;
-        }
-
-        public DatoImagen getAttachment() {
-            return attachment;
-        }
 
 
         // nested classes
@@ -71,7 +83,44 @@ public class Equipo {
             }
         }
 
-        public class DatoCurso {
+        public class DatoTecnico {
+
+            DatoTitle value;
+            public DatoTitle getValue() {return value;}
+            public void setValue(DatoTitle value) {
+                this.value = value;
+            }
+
+            public class DatoTitle {
+                String title;
+
+                public String getTitle() {
+                    return title;
+                }
+
+                public void setTitle(String title) {
+                    this.title = title;
+                }
+            }
+        }
+        public class DatoTecnicoRef {
+
+            DatoHref value;
+            public DatoHref getValue() {return value;}
+            public void setValue(DatoHref value) {
+                this.value = value;
+            }
+
+            public class DatoHref {
+                String href;
+
+                public String getHref() { return href;}
+
+                public void setHref(String href) {this.href = href;}
+            }
+        }
+
+        public class DatoCliente {
 
             DatoTitle value;
 
@@ -96,7 +145,7 @@ public class Equipo {
             }
         }
 
-        public class DatoMarca {
+        public class DatoEquipo {
 
             DatoTitle value;
 
@@ -121,55 +170,7 @@ public class Equipo {
             }
         }
 
-        public class DatoModelo {
 
-            DatoTitle value;
-
-            public DatoTitle getValue() {
-                return value;
-            }
-
-            public void setValue(DatoTitle value) {
-                this.value = value;
-            }
-
-            public class DatoTitle {
-                String title;
-
-                public String getTitle() {
-                    return title;
-                }
-
-                public void setTitle(String title) {
-                    this.title = title;
-                }
-            }
-        }
-
-        public class DatoImagen {
-
-            DatoValue value;
-
-            public DatoValue getValue() {
-                return value;
-            }
-
-            public void setValue(DatoValue value) {
-                this.value = value;
-            }
-
-            public class DatoValue {
-                String value;
-
-                public String getValue() {
-                    return value;
-                }
-
-                public void setValue(String value) {
-                    this.value = value;
-                }
-            }
-        }
 
     }
 }

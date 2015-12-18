@@ -1,9 +1,10 @@
 package com.pluscel.pluscelmovil.dom;
 
 /**
- * Created by Pablo Pincheira on 20/10/2015.
+ * Created by Pablo Pincheira on 16/11/2015.
  */
-public class Equipo {
+public class Cliente {
+
 
     Members members;
 
@@ -19,42 +20,54 @@ public class Equipo {
     // nested class
     public class Members{
 
-        DatoMarca marca;
-        DatoModelo modelo;
-        DatoString imei;
-        DatoImagen attachment;
-        DatoString AltaAccesorioEquipo;
-        DatoString listaAccesorioDeEquipo;
-        DatoString altaEquipoTecnico;
-        DatoString listaTecnicoDeEquipo;
-        DatoString altaFallaPorEquipoPorTecnico;
-        DatoString altaOrdenDeServicio;
-        DatoString buscarPorReparaciones;
-        DatoString altaPresupuesto;
+        DatoString apellido;
+        DatoString nombre;
+        DatoString dni;
+        DatoString sexo;
+        DatoString nacionalidad;
+        DatoString fechaNacimiento;
+        DatoDireccion direccion;
+        DatoString telefono;
+        DatoString email;
+        DatoString habilitado;
 
-        public DatoMarca getMarca() {
-            return marca;
+
+        public DatoString getApellido() {
+            return apellido;
         }
 
-        public void setMarca(DatoMarca marca) {
-            this.marca = marca;
+        public DatoString getNombre() {
+            return nombre;
         }
 
-        public DatoModelo getModelo() {
-            return modelo;
+        public DatoString getDNI() {
+            return dni;
         }
 
-        public void setModelo(DatoModelo modelo) {
-            this.modelo = modelo;
+        public DatoString getSexo() {
+            return sexo;
+        }
+        public DatoString getNacionalidad() {
+            return nacionalidad;
+        }
+        public DatoString getFechaNacimiento() {
+            return fechaNacimiento;
+        }
+        public DatoDireccion getDireccion() {
+            return direccion;
         }
 
-        public DatoString getImei() {
-            return imei;
+        public DatoString getTelefono() {
+            return telefono;
+        }
+        public DatoString getEmail() {
+            return email;
+        }
+        public DatoString getHabilitado() {
+            return habilitado;
         }
 
-        public DatoImagen getAttachment() {
-            return attachment;
-        }
+
 
 
         // nested classes
@@ -121,7 +134,7 @@ public class Equipo {
             }
         }
 
-        public class DatoModelo {
+        public class DatoDireccion {
 
             DatoTitle value;
 
@@ -146,30 +159,7 @@ public class Equipo {
             }
         }
 
-        public class DatoImagen {
 
-            DatoValue value;
-
-            public DatoValue getValue() {
-                return value;
-            }
-
-            public void setValue(DatoValue value) {
-                this.value = value;
-            }
-
-            public class DatoValue {
-                String value;
-
-                public String getValue() {
-                    return value;
-                }
-
-                public void setValue(String value) {
-                    this.value = value;
-                }
-            }
-        }
 
     }
 }
