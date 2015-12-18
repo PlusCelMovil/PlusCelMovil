@@ -5,5 +5,6 @@
     <color name="TextoUsuario">#ffe6e6e6</color>
     <color name="FondoBoton">#ffa2a2a2</color>
     <color name="TextoBoton">#FF000000</color>
+    <color name="TextoBotonOscuro">#000033</color>
 
 </resources>
