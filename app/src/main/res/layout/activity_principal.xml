@@ -21,17 +21,23 @@
             android:layout_weight="1"
             android:onClick="onClickButton_EquipoReparado"
             android:adjustViewBounds="false"
-            android:src="@mipmap/ic_equipo"
+            android:src="@mipmap/ic_equiporepa"
             android:clickable="false"
-            android:scaleType="fitCenter" />
+            android:scaleType="fitCenter"
+            android:tintMode="src_in"
+            android:padding="@dimen/abc_action_bar_default_padding_end_material" />
+
+
+
         <ImageButton
             android:layout_width="0dp"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:id="@+id/imageButton4"
-            android:layout_weight="1"
+            android:layout_weight="1.01"
             android:scaleType="fitCenter"
-            android:src="@mipmap/ic_celuroto"
-            android:onClick="onClickButton_EquipoSinRevisar" />
+            android:src="@mipmap/ic_sinrevizar"
+            android:onClick="onClickButton_EquipoSinRevisar"
+            android:padding="@dimen/abc_action_bar_default_padding_end_material" />
 
         <ImageButton
             android:layout_width="0dp"
@@ -39,8 +45,9 @@
             android:id="@+id/imageButton7"
             android:layout_weight="1"
             android:scaleType="fitCenter"
-            android:src="@mipmap/ic_equipo"
-            android:onClick="onClickButton_EquipoSinArreglo" />
+            android:src="@mipmap/ic_sinarreglo"
+            android:onClick="onClickButton_EquipoSinArreglo"
+            android:padding="@dimen/abc_action_bar_default_padding_start_material" />
 
     </LinearLayout>
 
@@ -58,15 +65,17 @@
             android:onClick="onClickButton_ListClientes"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:src="@mipmap/clientes" />
+            android:src="@mipmap/ic_cliente_new"
+            android:padding="@dimen/abc_action_bar_default_padding_end_material" />
         <ImageButton
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:id="@+id/imageButton3"
             android:layout_weight="1"
-            android:src="@mipmap/ic_tecnico"
+            android:src="@mipmap/ic_tecniconew"
             android:scaleType="fitCenter"
-            android:onClick="onClickButton_ListTecnicos" />
+            android:onClick="onClickButton_ListTecnicos"
+            android:padding="@dimen/abc_action_bar_default_padding_end_material" />
     </LinearLayout>
 
     <LinearLayout
@@ -79,18 +88,21 @@
             android:layout_height="fill_parent"
             android:id="@+id/imageButton5"
             android:layout_weight="1"
-            android:src="@mipmap/ic_os"
+            android:src="@mipmap/ic_os_new"
             android:scaleType="fitCenter"
-            android:onClick="onClickButton_OrdenServicio" />
+            android:onClick="onClickButton_OrdenServicio"
+            android:padding="@dimen/abc_action_bar_default_padding_start_material" />
         <ImageButton
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:id="@+id/imageButton8"
             android:layout_weight="1"
-            android:src="@mipmap/ic_repuestos"
+            android:src="@mipmap/ic_reparacion_new"
             android:scaleType="fitCenter"
             android:onClick="onClickButton_Reparacion"
-            android:contentDescription="Reparaciones" />
+            android:contentDescription="Reparaciones"
+            android:padding="@dimen/abc_action_bar_default_padding_start_material" />
+
 
     </LinearLayout>
 </LinearLayout>

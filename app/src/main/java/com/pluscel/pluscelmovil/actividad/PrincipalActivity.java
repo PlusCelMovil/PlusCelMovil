@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
+import android.view.Menu;
 import com.pluscel.pluscelmovil.R;
 import com.pluscel.pluscelmovil.dom.IsisService;
 import com.pluscel.pluscelmovil.serv.RestLink;
@@ -53,7 +53,11 @@ public class PrincipalActivity extends Activity {
         //Captura del evento Click del boton
         Button button_Equipment = (Button) findViewById(R.id.button_Equipment);
     }
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_principal, menu);
+        return true;
+    }
 
 
     public void onClickButton_Equipos(View view) {

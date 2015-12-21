@@ -276,5 +276,6 @@ public class EquipoListActivity extends Activity {
             return true;
         }
 
+
     }
 }
